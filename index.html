@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" type="image/x-icon" href="logoteste2.png">
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>AnaLogo</title>
+  <style>
+    * {
+      text-decoration: none;
+    }
+
+    body {
+      background-color: whitesmoke;
+      font-family: calibri;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar {
+      background: crimson;
+      font-family: cursive;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+    }
+
+    .navbar ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      margin-right: 25px;
+    }
+
+    .navbar ul li a {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .login-form {
+      position: fixed;
+      right: 32px;
+      top: 75px;
+      background-color: #ffffff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+    }
+
+    .login-form.open {
+      max-height: 200px;
+    }
+
+    .login-form label,
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .login-form button {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .login-form label {
+      font-weight: bold;
+    }
+
+    .login-form input[type="email"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .login-form button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-form a {
+      color: black;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .image-caption {
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    .image-caption img {
+      margin: 10px auto;
+      display: block;
+    }
+
+    li a:hover {
+      text-decoration: underline;
+      color: white;
+    }
+  </style>
+
+  <script>
+    function toggleLoginForm() {
+      const loginForm = document.getElementById("loginForm");
+      loginForm.classList.toggle("open");
+    }
+  </script>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="images/analogo.png" width="180" height="50" alt="AnaLogo"></a>
+    </div>
+    <ul>
+      <li><a href="index.html">Página Inicial</a></li>
+      <li><a href="contactos.html">Contactos</a></li>
+    </ul>
+  </nav>
+
+  <div class="login-form" id="loginForm">
+    <center>
+      <a style="text-decoration: underline;" onclick="toggleLoginForm()">Faça Login Aqui:</a>
+    </center>
+    <form action="validarContaMenu.php" class="form-container" method="POST">
+      <label for="email">Email:</label>
+      <input type="email" name="email" required>
+
+      <label for="psw">Password:</label>
+      <input type="password" name="psw" required>
+
+      <button type="submit">Login</button>
+    </form>
+    <a href="pag_registar.html">Registe-se Aqui</a>
+  </div>
+
+  <div class="container">
+    <div class="image-caption">
+      <h1>Bem-vindo ao Analogo - O Website de Testes de Marcas Gráficas!</h1>
+      <p>No mundo atual, onde a identidade visual é fundamental para o sucesso de uma empresa, é essencial garantir que
+        a tua marca gráfica seja eficaz e transmita a mensagem correta. Com o Analogo, tens acesso a uma plataforma
+        abrangente que oferece diversas formas de análise para garantir a qualidade e a consistência da tua marca.</p>
+      <p>Uma das ferramentas poderosas disponíveis no Analogo é a capacidade de analisar a pixelização da imagem. A
+        pixelização pode ocorrer quando uma imagem é redimensionada incorretamente ou quando a resolução é inadequada.
+        Com o teste de pixelização, podes identificar áreas problemáticas na tua marca gráfica e corrigi-las para
+        garantir uma aparência nítida e profissional em qualquer tamanho.</p>
+      <p>Além disso, o Analogo permite que faças a inversão de cores. A inversão de cores pode revelar detalhes ocultos
+        ou
+        destacar elementos que não são facilmente perceptíveis na versão original da marca. Essa análise é especialmente
+        útil para verificar se a tua marca se destaca adequadamente em diferentes fundos ou em mídias impressas e
+        digitais.</p>
+      <p>Outra funcionalidade importante do AnaLogo é a simulação da cegueira de cores. Aproximadamente 8% da população
+        masculina e 0,5% da população feminina sofrem de algum tipo de daltonismo. Com essa ferramenta, podes visualizar
+        como a tua marca é percebida por pessoas com diferentes tipos de daltonismo. Isso garante que a tua marca seja
+        inclusiva e acessível a todos os utilizadores, independentemente da sua percepção de cores.</p>
+      <p>E não fica por aqui! O Analogo também oferece a opção de gerar um relatório de normalização. Esse relatório
+        identifica quaisquer problemas em potencial na tua marca gráfica, como diferenças de cor entre diferentes
+        versões ou variações de tamanho inconsistentes. Com base nessas informações, podes tomar medidas para normalizar
+        a tua marca, garantindo uma apresentação coesa e profissional em todas as plataformas.</p>
+      <p>No Analogo, estamos empenhados em ajudar-te a alcançar o máximo potencial da tua marca gráfica. A nossa
+        plataforma intuitiva e abrangente oferece uma variedade de testes e análises para garantir que a tua marca seja
+        impactante, consistente e acessível a todos. Experimenta o AnaLogo hoje mesmo e eleva a tua marca gráfica a um
+        novo patamar!</p>
+    </div>
+
+    <img id="img_1" src="images/img_1.png">
+  </div>
+
+  <br>
+  <br>
+
+  <div class="container">
+    <div class="image-caption">
+      <img id="img_1" src="images/img_3.png">
+      <p>As marcas gráficas são essenciais para se destacar no mercado atual. Através do AnaLogo, um website
+        especializado em testes de marcas gráficas, é possível avaliar e aprimorar a eficácia da tua marca. Com testes
+        de pixelização, inversão de cores e simulação de daltonismo, o AnaLogo ajuda a garantir que a tua marca seja
+        facilmente reconhecida e transmita uma mensagem clara. Experimenta o AnaLogo e fortalece a identidade visual da
+        tua marca.</p>
+    </div>
+  </div>
+
+</body>
+
+</html>

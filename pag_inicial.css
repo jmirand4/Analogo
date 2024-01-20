@@ -1,0 +1,110 @@
+.background {
+  background-position: top center;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  /*background-image: url(background.jpg);*/
+  background-size: cover;
+  background: linear-gradient(to bottom left, #C2D8E9 0%, rgba(59, 53, 52, 0) 180%);
+  height: 100vh;
+  /* altura da página */
+}
+
+#logo-Menu {
+  position: absolute;
+  right: 20px;
+  top: 2px;
+}
+
+#logo-Center {
+  display: block;
+  margin: 0 auto;
+}
+
+.open-button1 {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: absolute;
+  right: 598px;
+  width: 250px;
+  top: 202px;
+  margin: 0 auto;
+}
+
+.open-button2 {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: absolute;
+  right: 598px;
+  width: 250px;
+  top: 270px;
+  margin: 0 auto;
+}
+
+.form-popup1 {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+  top: 180px;
+  right: 580px;
+  width: 280px;
+}
+
+.form-popup2 {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  z-index: 9;
+  top: 190px;
+  right: 580px;
+  width: 280px;
+}
+
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+}
+
+.form-container input[type=email],
+.form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+.form-container input[type=email]:focus,
+.form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover,
+.open-button:hover {
+  opacity: 1;
+}

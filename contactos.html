@@ -1,0 +1,217 @@
+<html>
+
+<head>
+    <link rel="icon" type="image/x-icon" href="logoteste2.png">
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>AnaLogo</title>
+</head>
+
+<style>
+    * {
+        text-decoration: none;
+    }
+
+    body {
+        background-color: whitesmoke;
+        font-family: calibri;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        background: crimson;
+        font-family: cursive;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin-right: 25px;
+    }
+
+    .navbar ul li a {
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .login-form {
+        position: fixed;
+        right: 32px;
+        top: 75px;
+        background-color: #ffffff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+
+    .login-form.open {
+        max-height: 210px;
+    }
+
+    .login-form label,
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .login-form button {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .login-form label {
+        font-weight: bold;
+    }
+
+    .login-form input[type="email"],
+    .login-form input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .login-form button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .login-form a {
+        color: black;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .contact-card {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .contact-card img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+    .contact-info {
+        font-size: 18px;
+    }
+</style>
+<script>
+    function toggleLoginForm() {
+        const loginForm = document.getElementById("loginForm");
+        loginForm.classList.toggle("open");
+    }
+</script>
+
+<body>
+
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/analogo.png" width="180" height="50" alt="AnaLogo"></a>
+            </div>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+
+        <div class="login-form" id="loginForm">
+            <center>
+                <a style="text-decoration: underline;" onclick="toggleLoginForm()">Faça Login Aqui:</a>
+            </center>
+            <form action="validarContaMenu.php" class="form-container" method="POST">
+                <label for="email">Email:</label>
+                <input type="email" name="email" required>
+
+                <label for="psw">Password:</label>
+                <input type="password" name="psw" required>
+
+                <button type="submit">Login</button>
+            </form>
+            <a href="pag_registar.html">Registe-se Aqui</a>
+        </div>
+
+        <div class="container">
+            <h1>Contactos</h1>
+            <p>Entre em contato conosco para obter mais informações ou esclarecer dúvidas:</p>
+
+            <div class="contact-card">
+                <img src="images/donoWebSite.png" alt="Criador do Website">
+                <div class="contact-info">
+                    <h2>Criador do Website</h2>
+                    <p>João Miranda</p>
+                    <p>Email: jmiranda@ipcbcampus.pt</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-info">
+                    <h2>Juris do Website</h2>
+                    <p>Arlindo Silva</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-info">
+                    <p>Fernando Barbosa</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-info">
+                    <p>Mónica Costa</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-info">
+                    <h2>Orientadores</h2>
+                    <p>Arlindo Silva</p>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-info">
+                    <p>Daniel Raposo</p>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
